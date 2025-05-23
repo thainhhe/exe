@@ -1,0 +1,39 @@
+/* Header.css */
+.header {
+  background-color: #343a40; /* Dark background */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding around header */
+}
+
+.inner-logo {
+  font-size: 24px; /* Logo font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+.logo-link {
+  color: white; /* Logo link color */
+  text-decoration: none; /* No underline on logo */
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.admin-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
+}
+
+.admin-name {
+  margin-left: 10px; /* Space between icon and name */
+}
+
+.logout-button {
+  margin-left: 20px; /* Space before logout button */
+}

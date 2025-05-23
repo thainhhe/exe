@@ -1,0 +1,342 @@
+:root {
+    --cardColor: white;
+    --buttonBg: #3E8E41;
+    --textColor: #E0E0E0;
+    --borderColor: #ddd;
+}
+
+.Chat {
+    margin-top: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 1rem;
+}
+
+.Left-side-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--cardColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: auto;
+    min-height: 80vh;
+    overflow: scroll;
+}
+
+.Chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Right-side-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--borderColor);
+    border-radius: 1rem;
+}
+
+.conversation:hover {
+    background: #80808038;
+    cursor: pointer;
+}
+
+.conversation {
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+.conversation>div {
+    position: relative;
+}
+
+.online-dot {
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.chatbox-empty-message {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+.ChatBox-container {
+    background: var(--cardColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 10vh 60vh 13vh;
+}
+
+.chat-header {
+    padding: 1rem 1rem 0rem 1rem;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--borderColor);
+
+
+}
+
+.avatar-container {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border: #3E8E41 2px solid;
+}
+
+.chat-header .name {
+    margin-left: 10px;
+}
+
+.online-dot {
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #51e200;
+    margin-left: 9px;
+}
+
+.chat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #80808029;
+
+}
+
+
+.message {
+    background: var(--buttonBg);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 1rem 1rem 1rem 0;
+    max-width: 30rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.own {
+    align-self: flex-end;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.time-sender {
+    color: #4b5563;
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: -20px;
+    right: -22px;
+    width: 122px;
+}
+.time-receiver{
+    position: absolute;
+    color: #4b5563;
+    font-size: 0.7rem;
+
+    bottom: -20px;
+    left: 0px;
+    width: 122px;
+}
+
+.myself {
+    display: none;
+}
+
+.chat-sender {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    height: 6.2rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+   
+    border-radius: 1rem;
+    align-self: end;
+}
+
+.chat-sender>input {
+    height: 70%;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.5rem;
+    border: 1px solid var(--borderColor);
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    padding: 0px 15px;
+}
+
+.chat-sender>div:nth-of-type(1) {
+    background: rgb(233, 233, 233);
+    border: 1px solid var(--borderColor);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.emoji-picker {
+    position: absolute;
+    bottom: 90px;
+    right: 0px;
+    z-index: 1000;
+}
+
+.box-typing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.is-typing-text {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.inner-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem;
+    width: 5%;
+}
+
+.dot {
+    align-items: center;
+    width: 0.375rem;
+    height: 0.375rem;
+    background-color: #6b7280;
+    border-radius: 9999px;
+    margin: 0 0.125rem;
+    animation: bounce 1.4s infinite;
+}
+
+/* Adjust animation delay for each dot */
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+        /* Bounce effect */
+    }
+}
+@media screen and (max-width: 768px) {
+   .Chat-container{
+    min-height: 50px;
+   }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .inner-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d1d5db;
+        border-radius: 9999px;
+        padding: 0.5rem 0.5rem;
+        width: 9%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Chat {
+        grid-template-columns: 1fr;
+    }
+
+    .Left-side-chat,
+    .Right-side-chat {
+        width: 100%;
+        display: block;
+    }
+
+    .inner-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d1d5db;
+        border-radius: 9999px;
+        padding: 0.5rem 0.5rem;
+        width: 22%;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .inner-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d1d5db;
+        border-radius: 9999px;
+        padding: 0.5rem 0.5rem;
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .inner-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d1d5db;
+        border-radius: 9999px;
+        padding: 0.5rem 0.5rem;
+        width: 22%;
+    }
+}

@@ -1,0 +1,76 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .profile-header {
+    margin-bottom: 24px;
+  }
+  
+  .profile-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-avatar {
+    border: 4px solid #f0f0f0;
+  }
+  
+  .profile-info {
+    width: 100%;
+  }
+  
+  .profile-content {
+    min-height: 400px;
+  }
+  
+  .order-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .profile-container {
+      padding: 16px;
+    }
+  
+    .profile-header .ant-row {
+      text-align: center;
+    }
+  
+    .profile-avatar-container {
+      margin-bottom: 16px;
+    }
+  
+    .profile-info {
+      align-items: center;
+    }
+  
+    .order-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+  
+  /* Ant Design component customizations */
+  .ant-descriptions-bordered .ant-descriptions-item-label {
+    width: 140px;
+  }
+  
+  .ant-tabs-tab {
+    font-size: 16px;
+  }
+  
+  .ant-list-item-meta-title {
+    margin-bottom: 4px !important;
+  }
+  
+  .ant-tag {
+    min-width: 80px;
+    text-align: center;
+  }

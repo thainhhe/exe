@@ -1,0 +1,39 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+  
+  footer {
+    flex-shrink: 0;
+  }
+  .chat-button {
+    position: fixed;
+     bottom: 30%;
+    right: 20px; 
+    z-index: 1000;
+  }
+  
+  .chat-button .ant-btn {
+    background-color: #1890ff;
+    border-color: #1890ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-button .ant-btn:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+  }
+  
+    footer {
+      flex-shrink: 0;
+    }
+    

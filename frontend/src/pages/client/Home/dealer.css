@@ -1,0 +1,161 @@
+.dealer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+  
+.trust-content {
+    position: relative;
+    min-height: 300px; /* Thêm để đảm bảo có không gian cho text và ảnh */
+}
+  
+.trust-header {
+    position: absolute; /* Thay đổi từ relative sang absolute */
+    z-index: 2;
+    left: 0; /* Thêm vào */
+    top: 50%; /* Thêm vào */
+    transform: translateY(-50%); /* Thêm vào */
+}
+  
+.more-than {
+    margin: 0 !important;
+    color: #333 !important;
+    font-size: 32px !important;
+}
+  
+.customer-number {
+    font-size: 120px !important;
+    line-height: 1 !important;
+    margin: 8px 0 !important;
+    color: #C5B097 !important;
+    font-weight: 700 !important;
+}
+  
+.trust-text {
+    margin: 0 !important;
+    color: #333 !important;
+    font-size: 48px !important;
+    line-height: 1.2 !important;
+}
+  
+.coffee-image {
+    position: absolute;
+    right: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.8;
+    width: 100%; /* Thêm vào */
+    text-align: right; /* Thêm vào */
+}
+  
+.coffee-cup {
+    max-width: 400px;
+    height: auto;
+}
+  
+.dealer-content {
+    max-width: 600px;
+}
+  
+.dealer-title {
+    font-size: 56px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 24px !important;
+    color: #333 !important;
+}
+  
+.dealer-description {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+    margin-bottom: 32px !important;
+}
+  
+.button-group {
+    margin-top: 32px;
+}
+  
+.dealer-button {
+    height: 48px !important;
+    padding: 0 32px !important;
+    font-size: 16px !important;
+    background: #333 !important;
+    border: none !important;
+}
+  
+.dealer-button:hover {
+    background: #000 !important;
+}
+  
+.contact-button {
+    height: 48px !important;
+    padding: 0 32px !important;
+    font-size: 16px !important;
+    background: #C5B097 !important;
+    border: none !important;
+    color: white !important;
+}
+  
+.contact-button:hover {
+    background: #B5A087 !important;
+    color: white !important;
+}
+  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dealer-container {
+        padding: 32px 16px;
+    }
+  
+    .trust-content {
+        min-height: auto; /* Reset min-height trên mobile */
+    }
+
+    .trust-header {
+        position: relative; /* Reset về relative trên mobile */
+        transform: none;
+        top: 0;
+    }
+  
+    .customer-number {
+        font-size: 80px !important;
+    }
+  
+    .trust-text {
+        font-size: 36px !important;
+    }
+  
+    .dealer-title {
+        font-size: 42px !important;
+    }
+  
+    .coffee-image {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+        margin-top: 24px;
+        text-align: center;
+        opacity: 0.8;
+    }
+  
+    .coffee-cup {
+        max-width: 280px;
+    }
+  
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+  
+    .button-group .ant-space-item {
+        width: 100%;
+    }
+  
+    .dealer-button,
+    .contact-button {
+        width: 100%;
+    }
+}

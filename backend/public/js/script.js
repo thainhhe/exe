@@ -1,0 +1,1 @@
+console.log("Đã vào file script.js")
